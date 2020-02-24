@@ -25,12 +25,12 @@ namespace ConsoleApp2
             public static void traverseLinkedList()
             {
                 int TotalCalories = 0;
-                Fruit currentNode = head;
-                while (!((currentNode.fruitName).Equals("tail")))
+                Fruit currentNode = tail;
+                while (!((currentNode.fruitName).Equals("head")))
                 {
                     Console.WriteLine(currentNode.fruitName);
                     TotalCalories += currentNode.Calories;
-                    currentNode = currentNode.nextFruit;
+                    currentNode = currentNode.previousFruit;
                 }
                 Console.WriteLine("total calories is {0}", TotalCalories);
 
